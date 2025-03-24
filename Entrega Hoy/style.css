@@ -1,0 +1,344 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+}
+
+header {
+    background-color: #f0f0f0;
+}
+
+.top-bar {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: right;
+}
+
+.top-bar a, .top-bar button {
+    color: white;
+    margin-left: 10px;
+}
+
+.top-bar select {
+    margin-left: 10px;
+    background-color: #000000;
+    color: #ccc;
+
+}
+
+.main-header {
+    display: flex;
+    align-items: center;
+    padding: 1%;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    margin-right: 20px;
+}
+
+/* Inicio del código: personalización de la barra de búsquedas */
+/* Estilo general para la barra de búsqueda */
+.search-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;  /* Espacio entre los elementos */
+    padding: 10px;
+    border: none; 
+    border-radius: 5px;  /* Bordes redondeados */
+    background-color: transparent;  /* Fondo transparente */
+    width: 600px;  /* Ancho del 80% del contenedor */
+    margin: 20px auto;  /* Centra la barra en la página */
+}
+
+/* Estilo para el input de búsqueda */
+.search-bar input[type="text"] {
+    padding: 8px 12px;
+    font-size: 14px;
+    border: 1px solid #ccc;  /* Borde gris */
+    border-radius: 5px;
+    width: 800px;  /* Ancho del campo de búsqueda */
+}
+
+/* Estilo para el botón de búsqueda */
+.buscar {
+    padding: 8px 20px;
+    font-size: 16px;
+    background-color: #007bff;  /* Fondo azul */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;  /* Cambia el cursor a mano */
+    transition: background-color 0.3s ease, transform 0.3s ease;  /* Transiciones para efectos */
+}
+
+/* Efecto al pasar el mouse sobre el botón */
+.buscar:hover {
+    background-color: #0056b3;  /* Fondo más oscuro */
+    transform: scale(1.05);  /* Aumenta ligeramente el tamaño */
+}
+
+/* Efecto al hacer clic en el botón */
+.buscar:active {
+    background-color: #003d7a;  /* Fondo aún más oscuro */
+    transform: scale(0.98);  /* Reducción ligera del tamaño */
+}
+/* Final del código: personalización de la barra de búsquedas */
+
+/* Inicio del código: personalización de la barra con las marcas */
+.categories-nav {
+    background-color: #ddd;
+    padding: 10px;
+    text-align: center; /* Centra los enlaces dentro del contenedor */
+}
+
+.categories-nav a {
+    margin-right: 15px;
+    color: black; /* Cambia el color de la letra a negro */
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+}
+/* Cambiar el color al pasar el ratón sobre el enlace */
+.categories-nav a:hover {
+    color: #007bff; /* Cambia el color al pasar el ratón (puedes elegir el color que prefieras) */
+}
+/* Final del código: personalización de la barra con las marcas */
+
+.featured-products {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    flex-wrap: wrap; /* Allow wrapping of products */
+}
+
+.product {
+    text-align: center;
+    margin-bottom: 0; /* Remove space below each product */
+}
+
+.product {
+    text-align: center;
+}
+
+.product a {
+    display: block; /* Hace que el enlace ocupe toda la línea */
+    margin-top: 10px; /* Espacio entre la imagen y el texto */
+    font-weight: bold; /* Opcional: hace el texto más visible */
+    text-decoration: none; /* Quita el subrayado */
+    color: black; /* Cambia el color si lo necesitas */
+}
+
+.product img {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 0; /* Remove space between image and product name */
+}
+
+.banner {
+    margin-top: 20px; 
+    background-image: url('./Images/ImagenFondo2jpg.jpg'); /* Reemplaza con tu imagen */
+    background-size: cover;
+    color: white;
+    text-align: center;
+    padding: 100px 0;
+}
+
+.banner-content {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    display: inline-block;
+}
+
+.product-previews {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.product-previews h2 {
+    margin-top: 20px;  /* Espacio arriba del título */
+    margin-bottom: 20px;  /* Espacio debajo del título */
+    font-size: 35px; /* Tamaño de la fuente */
+    font-family: Arial, sans-serif; /* Tipo de fuente */
+    text-align: center; /* Centra el texto horizontalmente */
+    color: #000000;
+}
+
+.product-previews img {
+    width: 150px;
+    height: auto;
+}
+
+.product-preview img {
+    width: 200px;
+    height: auto;
+}
+
+footer {
+    background-color: #f0f0f0;
+    padding: 20px;
+    text-align: center;
+    margin-right: 60px; /* Increased margin for footer links */
+}
+
+/* Título de los relojes */
+h2 {
+    margin-top: 20px;  /* Espacio arriba del título */
+    margin-bottom: 20px;  /* Espacio debajo del título */
+    font-size: 28px; /* Tamaño de la fuente */
+    font-family: Arial, sans-serif; /* Tipo de fuente */
+    text-align: center; /* Centra el texto horizontalmente */
+}
+
+/* Inicio del código: botón "Comprar por categorias" */
+/* Estilos para el botón transparente */
+.btn-custom {
+    background: none !important;  /* Sin color de fondo */
+    border: none !important;      /* Sin borde */
+    color: inherit !important;    /* Usa el color del texto predeterminado */
+    font-size: inherit !important; /* Usa el tamaño de fuente del contexto */
+    cursor: pointer !important;    /* Mantiene el cursor de botón */
+    padding: 0 !important;        /* Sin espaciado interno */
+    outline: none !important;     /* Sin contorno al hacer clic */
+}
+/* Estilos adicionales para el modal */
+.modal-content {
+    padding: 20px;
+}
+
+/* Estilos para los enlaces dentro del modal */
+.category-link {
+    display: block;
+    padding: 12px;
+    text-decoration: none;    /* Eliminar subrayado */
+    color: #000000;              /* Color de texto */
+    font-size: 18px;
+    border-radius: 8px;       /* Bordes redondeados */
+    margin-bottom: 10px;      /* Espaciado entre enlaces */
+    text-align: center;       /* Centrar el texto */
+    transition: all 0.3s ease; /* Transición suave para los efectos */
+}
+
+/* Estilo del enlace al pasar el mouse */
+.category-link:hover {
+    background-color: #f3f6f9; /* Cambio de color de fondo */
+    color: #000000;               /* Color de texto al pasar el mouse */
+    transform: translateY(-3px); /* Efecto de desplazamiento hacia arriba */
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1); /* Sombra al pasar el mouse */
+}
+
+/* Estilo cuando el enlace es activado (hace clic en el enlace) */
+.category-link:active {
+    transform: translateY(1px); /* Efecto al hacer clic (desplazamiento hacia abajo) */
+}
+/* Final del código botón "Comprar por categorias" */
+
+/* Inicio del código: botón "Ver carrito" */
+/* Estilo del botón para abrir el carrito */
+.btn-custom {
+    background: none;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    padding: 10px;
+}
+
+/* Título de los relojes */
+h5 {
+    margin-top: 20px;  /* Espacio arriba del título */
+    margin-bottom: 20px;  /* Espacio debajo del título */
+    font-size: 22px; /* Tamaño de la fuente */
+    font-family: Arial, sans-serif; /* Tipo de fuente */
+    text-align: center; /* Centra el texto horizontalmente */
+    color: #000000;
+}
+/* Centrar el modal */
+.modal-content {
+    text-align: center;
+}
+
+/* Lista de productos dentro del carrito */
+#cart-items {
+    list-style: none;
+    padding: 0;
+    color: #000000;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Imagen del producto */
+.cart-item img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    margin-right: 10px;
+    border-radius: 5px;
+}
+
+/* Nombre del producto */
+.cart-item .product-info {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+}
+
+/* Botón para eliminar producto */
+.remove-btn {
+    background: none;
+    border: none;
+    color: red;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.remove-btn:hover {
+    color: darkred;
+}
+
+/* Botón de cerrar carrito */
+#closeCart {
+    width: 100%;
+}
+
+footer {
+    display: flex;
+    gap: 20px; /* Espacio entre los enlaces */
+}
+
+.banner-content p {
+    padding-bottom: 10px;
+    margin-top: 20px;
+}
+.product-previews {
+    display: block;  /* Cambiado a block para asegurar que las imágenes se muestren en bloque */
+    text-align: center; /* Centra las imágenes debajo del título */
+    margin-top: 30px;  /* Aumentar espacio entre el título y las imágenes */
+}
+
+.product-previews h2 {
+    margin-top: 0;  /* Sin espacio arriba del título */
+    margin-bottom: 20px;  /* Mantiene espacio debajo del título */
+    font-size: 35px;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    color: #000000;
+}
+
+.product-preview {
+    display: inline-block;  /* Cambiado para que las imágenes se alineen horizontalmente */
+    margin: 10px; /* Espacio entre las imágenes */
+}
+
+.product-preview img {
+    width: 200px;  /* Mantén el tamaño que desees para las imágenes */
+    height: auto;
+}
+
+

@@ -1,0 +1,109 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('fondo-login.jpg'); /* Ruta de la imagen */
+    background-size: cover; /* Hace que la imagen cubra toda la pantalla */
+    background-position: center center; /* Centra la imagen */
+    background-attachment: fixed; /* Mantiene la imagen fija cuando haces scroll */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.login-container {
+    background: rgba(255, 255, 255, 0.8); /* Fondo semitransparente para el contenedor */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+label {
+    width: 100%;
+    text-align: left;
+    margin-bottom: 5px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+/* Ajuste de tamaño para la imagen del login */
+.login-img {
+    width: 50px; /* Ajusta el tamaño de la imagen */
+    height: auto; /* Mantiene la proporción */
+    margin-bottom: 20px; /* Espacio debajo de la imagen */
+}
+
+p {
+    margin-top: 20px; /* Añade espacio arriba del texto */
+    font-size: 14px;
+}
+
+a {
+    color: #007bff; /* Color del enlace */
+    text-decoration: none; /* Quita el subrayado */
+}
+
+a:hover {
+    text-decoration: underline; /* Subraya el enlace cuando pasa el ratón por encima */
+    color: #0056b3; /* Cambia el color al pasar el ratón */
+}
+
+/* Botón para regresar a la página principal de Ebay */
+.back-button {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #28a745; /* Color verde */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+/* Modificación para el botón regresar */
+.back-button:hover {
+    background-color: #218838; /* Verde más oscuro al pasar el mouse */
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}

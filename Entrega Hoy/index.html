@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ebay: Compras en línea</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Enlace al archivo CSS personalizado -->   
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="top-bar">
+            <a href="./Login-Registro/login.html" target="_blank">Iniciar sesión o regístrate</a>
+            <a href="./Ayuda y Contacto/index.html" target="_blank">Ayuda y Contacto</a>
+            <a href="#">Vender</a>
+            <select id="mi-shop">
+                <option value="#">My Ebay</option>
+                <option value="#">Subastas</option>
+                <option value="#">Historial de compras</option>
+                <option value="#">Mensajes</option>
+            </select>
+            <!-- Inicio Código Modal "Carrito de compras" -->
+            <button id="openCart" class="btn-custom" data-bs-toggle="modal" data-bs-target="#cartModal">
+                🛒 Ver Carrito
+            </button> 
+
+            <!-- Modal del Carrito -->
+            <div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="cartTitle" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content" id="modalContent">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="cartTitle">🛒 Carrito de compras</h5>
+                        </div>
+                        <div class="modal-body">
+                            <ul id="cart-items">
+                                <li>No hay productos en el carrito</li>
+                            </ul>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-danger" id="closeCart">Cerrar carrito</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Final del Código Modal "Carrito de compras" -->
+        </div>
+        <div class="main-header">
+            <div class="logo">LOGO</div>
+
+            <!-- Modal "Comprar por categoria" -->
+            <div class="modal fade" id="miModal" tabindex="-1" aria-labelledby="modalTitulo" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content" id="modalContent">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="modalTitulo">Selecciona una categoría</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                        </div>
+                        <div class="modal-body">    
+                            <li><a href="./Login-Registro/login.html" class="category-link">Login</a></li>
+                            <li><a href="./Login-Registro/registro.html" class="category-link">Registro</a></li>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Final Código Modal "Comprar por categoria"  -->
+
+            <div class="search-bar">
+                <input type="text" placeholder="BARRA PARA BUSCAR ARTICULOS">
+                <button class="buscar">Buscar</button>
+            </div>
+        </div>
+        <nav class="categories-nav">
+            <a href="#">Balenciaga</a>
+            <a href="#">Burberry</a>
+            <a href="#">Cartier</a>
+            <a href="#">Celine</a>
+            <a href="#">Chloé</a>
+            <a href="#">Chopard</a>
+            <a href="#">Dior</a>
+            <a href="#">Dolce & Gabbana</a>
+            <a href="#">Givenchy</a>
+            <a href="#">Gucci</a>
+            <a href="#">Hublot</a>
+            <a href="#">IWC</a>
+            <a href="#">Louis Vuitton</a>
+            <a href="#">Rolex</a>
+            <a href="#">Versace</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Relojes de lujo por marca</h2>
+        <section class="featured-products">
+            <div class="product">
+                <img src="./Images/Reloj1.jpg" alt="Producto 1">
+                <a href="product1.html">Reloj 1</a>
+            </div>
+            <div class="product">
+                <img src="./Images/Reloj2.jpg" alt="Producto 2">
+                <a href="product2.html">Reloj 2</a>
+            </div>
+            <div class="product">
+                <img src="./Images/Reloj3.jpg" alt="Producto 3">
+                <a href="product3.html">Reloj 3</a>
+            </div>
+            <div class="product">
+                <img src="./Images/Reloj4.jpg" alt="Producto 4">
+                <a href="product4.html">Reloj 4</a>
+            </div>
+        </section>
+
+<section class="banner">
+            <div class="banner-content">
+                <h2>🔥 ¡Descubre las mejores ofertas en Ebay! 🎥✨ ¡Dale clic y sorpréndete!</h2>
+                <button id="moreButton">Mira más</button>
+                <div id="extraContent" style="display:none;">
+                    <p>Este es el contenido adicional que aparecerá cuando hagas clic en "Mira más".</p>
+                    <!-- Video dentro de la sección extraContent -->
+                    <video width="100%" height="auto" controls>
+                        <source src="./Images/video.mp4" type="video/mp4">
+                        Tu navegador no soporta el formato de video.
+                    </video>
+                </div>
+            </div>
+        </section>
+        <script>
+            // Obtener el botón y el contenido adicional
+            document.getElementById('moreButton').addEventListener('click', function() {
+                var extraContent = document.getElementById('extraContent');
+                
+                // Cambiar el estado de visibilidad del contenido
+                if (extraContent.style.display === 'none') {
+                    extraContent.style.display = 'block'; // Mostrar el contenido
+                    this.textContent = 'Ocultar'; // Cambiar el texto del botón
+                } else {
+                    extraContent.style.display = 'none'; // Ocultar el contenido
+                    this.textContent = 'Mira más'; // Restaurar el texto del botón
+                }
+            });
+        </script>
+        
+
+        <section class="product-previews">
+            <h2> 🔥 ¡En promoción! 🔥</h2>
+            <div class="product-preview">
+                <img src="./Images/Cartera.jpg" alt="Vista previa 1">
+            </div>
+            <div class="product-preview">
+                <img src="./Images/Faaja.jpg" alt="Vista previa 2">
+            </div>
+            <div class="product-preview">
+                <img src="./Images/Lentes.jpg" alt="Vista previa 3">
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <a href="./Acerca de/index.html" target="_blank">Acerca de Ebay</a>
+        <a href="./Politicas/index.html" target="_blank">Políticas</a>
+        <a href="./Ayuda y Contacto/index.html" target="_blank">Ayuda y Contacto</a>
+        <p>&copy; 2025 Ebay | Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Enlace al archivo JavaScript personalizado -->
+    <script src="script.js"></script>
